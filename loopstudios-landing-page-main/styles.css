@@ -1,0 +1,366 @@
+@import url("https://fonts.googleapis.com/css2?family=Alata&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap");
+:root {
+  --bg-white: hsl(0, 0%, 100%);
+  --bg-darkgray: hsl(0, 0%, 55%);
+  --bg-verydarkgray: hsl(0, 0%, 41%);
+  --bg-black: hsl(0, 0%, 0%);
+  --primary-ff: "Alata", sans-serif;
+  --secondary-ff: "Josefin Sans", sans-serif;
+}
+*,
+*::before,
+::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+html {
+  font-size: 62.5%;
+}
+img,
+picture {
+  display: block;
+  max-width: 100%;
+}
+button {
+  font: inherit;
+  outline-color: transparent;
+}
+ol,
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+a,
+button {
+  cursor: pointer;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  font-family: var(--primary-ff);
+  overflow-x: hidden;
+}
+.main-img {
+  position: relative;
+}
+.navigation {
+  padding: 8rem 15rem 0 15rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  position: absolute;
+  top: 0;
+}
+nav .mainMenu {
+  display: flex;
+}
+.mainMenu li a {
+  margin-left: 3rem;
+  font-size: 1.6rem;
+  color: var(--bg-white);
+  position: relative;
+}
+.bottom-nav ul li a {
+  font-size: 1.6rem;
+  color: var(--bg-white);
+  position: relative;
+}
+.main-heading {
+  position: absolute;
+  top: 22rem;
+  left: 15rem;
+}
+nav .openMenu,
+nav .mainMenu .closeMenu {
+  font-size: 2.4rem;
+  color: hsl(0, 0%, 100%);
+  display: none;
+}
+h1 {
+  max-width: 600px;
+  padding: 3rem 10rem 2rem 3rem;
+  font-size: 5.4rem;
+  letter-spacing: 2.5px;
+  font-family: var(--secondary-ff);
+  color: var(--bg-white);
+  border: 2px solid var(--bg-white);
+  font-weight: 300;
+}
+.main-container {
+  padding: 6rem 15rem 0 15rem;
+}
+.main-content {
+  display: flex;
+}
+.interactive-img img {
+  position: relative;
+  max-width: 731px;
+  clip-path: polygon(
+    0% 15%,
+    0 0,
+    15% 0%,
+    85% 0%,
+    100% 0,
+    100% 15%,
+    100% 32%,
+    78% 32%,
+    78% 100%,
+    15% 100%,
+    0 100%,
+    0% 85%
+  );
+}
+.para-info {
+  position: relative;
+  top: 300px;
+  left: -60px;
+}
+.para-info h2 {
+  font-size: 4rem;
+  font-family: var(--secondary-ff);
+  text-transform: uppercase;
+  font-weight: 300;
+}
+.para-info p {
+  margin-top: 2rem;
+  line-height: 2.4rem;
+  font-size: 1.4rem;
+  color: var(--bg-darkgray);
+}
+.creation {
+  margin: 15rem 0 7rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.creation h2 {
+  font-size: 4rem;
+  font-weight: 300;
+  font-family: var(--secondary-ff);
+}
+.creation button {
+  padding: 1rem 4rem;
+  background-color: var(--bg-white);
+  border: 1px solid var(--bg-verydarkgray);
+  letter-spacing: 2px;
+}
+.creation button:hover,
+.creation button:focus {
+  background-color: var(--bg-black);
+  color: var(--bg-white);
+}
+.image-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  row-gap: 4rem;
+}
+.image-grid > picture {
+  position: relative;
+}
+.img-heading {
+  position: absolute;
+  max-width: 130px;
+  top: 35rem;
+  margin-left: 4rem;
+  font-size: 2.4rem;
+  line-height: 3rem;
+  font-family: var(--secondary-ff);
+  color: var(--bg-white);
+  font-weight: 300;
+}
+.down-contents {
+  margin-top: 10rem;
+  padding: 3rem 15rem 3rem 15rem;
+  background-color: var(--bg-black);
+}
+.bottom-image {
+  padding-bottom: 3rem;
+}
+.bottom-image,
+.bottom-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.bottom-links li,
+.bottom-icons li {
+  display: inline-block;
+}
+.bottom-icons li a img {
+  margin-left: 1.5rem;
+}
+.bottom-links li a {
+  margin: 0 3rem 0 0;
+  color: var(--bg-white);
+}
+.bottom-links li a,
+.bottom-icons li a {
+  margin-left: 1.5rem;
+  position: relative;
+}
+.bottom-links li a:nth-child(1) {
+  margin-left: 0;
+}
+.mainMenu li a::before,
+.bottom-links li a::before,
+.bottom-icons li a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  height: 1.5px;
+  background: hsl(0, 0%, 100%);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+.mainMenu li a:hover::before,
+.mainMenu li a:focus::before,
+.bottom-links li a:hover::before,
+.bottom-links li a:focus::before,
+.bottom-icons li a:hover::before,
+.bottom-icons li a:focus::before {
+  transform: scaleX(1);
+}
+@media screen and (max-width: 375px) {
+  .main-logo {
+    position: absolute;
+    top: 4rem;
+    left: 2rem;
+    z-index: 100;
+  }
+  .main-img img {
+    max-width: 375px;
+  }
+  .navigation {
+    padding: 3rem 2rem 0 2rem;
+  }
+  nav .mainMenu {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    inset: 0;
+    z-index: 10;
+    flex-direction: column;
+    background: var(--bg-black);
+    transition: right 1s ease;
+    text-transform: uppercase;
+    padding-top: 35rem;
+  }
+  .mainMenu li {
+    padding: 2.5rem 0 2.5rem 2.5rem;
+  }
+  .mainMenu li a {
+    margin: 0 0 0 0;
+    font-size: 4rem;
+    font-family: var(--secondary-ff);
+  }
+  nav .openMenu,
+  nav .mainMenu .closeMenu {
+    display: block;
+    font-size: 3.5rem;
+  }
+  nav .openMenu,
+  nav .mainMenu .closeMenu {
+    display: block;
+    position: absolute;
+    top: 2.6rem;
+    right: 2rem;
+  }
+  .main-heading {
+    position: absolute;
+    top: 23rem;
+    left: 2rem;
+  }
+  h1 {
+    max-width: 335px;
+    padding: 3rem 2rem 2.5rem 3rem;
+    font-size: 3.6rem;
+  }
+  .main-container {
+    padding: 12rem 2rem 0 2rem;
+  }
+  .main-content {
+    flex-direction: column;
+  }
+  .interactive-img img {
+    max-width: 335px;
+    clip-path: none;
+  }
+  .para-info {
+    position: relative;
+    top: 7rem;
+    left: 0;
+    text-align: center;
+  }
+  .para-info h2 {
+    font-size: 3.6rem;
+  }
+  .para-info p {
+    margin-top: 3rem;
+    font-size: 1.7rem;
+    line-height: 3rem;
+  }
+  .creation {
+    margin: 15rem 0 2rem 0;
+    flex-direction: column;
+    position: relative;
+  }
+  .creation h2 {
+    font-size: 3.6rem;
+  }
+  .creation button {
+    position: absolute;
+    bottom: -135rem;
+    left: 120px;
+    text-align: center;
+  }
+  .image-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 4rem;
+  }
+  .img-heading {
+    top: 6.5rem;
+    margin: 0 20rem 0 2rem;
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+  .down-contents {
+    padding: 3rem 2rem 6rem 2rem;
+  }
+  .bottom-image,
+  .bottom-nav {
+    flex-direction: column;
+  }
+  .bottom-icons li {
+    margin: 3rem 0 0 0;
+    text-align: center;
+  }
+  .bottom-icons li a img {
+    margin-left: 3.5rem;
+  }
+  .bottom-icons li:nth-child(1) a img {
+    margin-left: 0;
+  }
+  .bottom-links li {
+    display: block;
+    text-align: center;
+    margin-bottom: 2.5rem;
+  }
+  .bottom-links li a {
+    margin: 0;
+    color: var(--bg-white);
+  }
+}
